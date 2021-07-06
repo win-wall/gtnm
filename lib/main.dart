@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gtnm/screens/app.dart';
+import 'package:gtnm/ultis/loadJson.dart';
 
-void main() {
+void main(){
   runApp(MyApp());
 }
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Ban hang',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

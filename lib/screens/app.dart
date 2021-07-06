@@ -49,50 +49,69 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
   // ignore: non_constant_identifier_names
   Widget _Drawer(){
     return Drawer(
-      child: ListView(
-        // Important: Remove any padding from the ListView.
-        padding: EdgeInsets.zero,
+      child: Column(
         children: [
           AppBar(
             leading: IconButton(
               icon: Icon(Icons.menu),
               onPressed: _openDrawer,
             ),
+            title: Text('Danh Mục'),
           ),
-          ListTile(
-            title: Text('Nổi Bật'),
-            onTap: ()=>_selectCategory('hot'),
-          ),
-          ListTile(
-            title: Text('Laptop'),
-            onTap: ()=>_selectCategory('laptop'),
-          ),
-          ListTile(
-            title: Text('Linh kiện PC'),
-            onTap: ()=>_selectCategory('linh kien'),
-          ),
-          ListTile(
-            title: Text('Màn hình'),
-            onTap: ()=>_selectCategory('man hinh'),
-          ),
-          ListTile(
-            title: Text('Chuột - Bàn phím'),
-            onTap: ()=>_selectCategory('chuot phim'),
-          ),
-          ListTile(
-            title: Text('Tai nghe - Loa'),
-            onTap: ()=>_selectCategory('tai loa'),
-          ),
-          ListTile(
-            title: Text('Console'),
-            onTap: ()=>_selectCategory('console'),
-          ),
-          ListTile(
-            title: Text('Phụ kiện'),
-            onTap: ()=>_selectCategory('phu kien'),
-          ),
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                ListTile(
+                  title: Text('Nổi Bật'),
+                  onTap: ()=>_selectCategory('hot'),
+                ),
+                ListTile(
+                  title: Text('Laptop'),
+                  onTap: ()=>_selectCategory('laptop'),
+                ),
+                ListTile(
+                  title: Text('Linh kiện PC'),
+                  onTap: ()=>_selectCategory('linh kien'),
+                ),
+                ListTile(
+                  title: Text('Màn hình'),
+                  onTap: ()=>_selectCategory('man hinh'),
+                ),
+                ListTile(
+                  title: Text('Chuột - Bàn phím'),
+                  onTap: ()=>_selectCategory('chuot phim'),
+                ),
+                ListTile(
+                  title: Text('Tai nghe - Loa'),
+                  onTap: ()=>_selectCategory('tai loa'),
+                ),
+                ListTile(
+                  title: Text('Console'),
+                  onTap: ()=>_selectCategory('console'),
+                ),
+                ListTile(
+                  title: Text('Phụ kiện'),
+                  onTap: ()=>_selectCategory('phu kien'),
+                ),
+                Divider(color: Colors.black26,),
+                ListTile(
+                  title: Text('Tìm cửa hàng'),
+                  onTap: (){},
+                ),
+                ListTile(
+                  title: Text('Chính sách'),
+                  onTap: (){},
+                ),
+                ListTile(
+                  title: Text('Liên hệ'),
+                  onTap: (){},
+                ),
+              ],
+            ),
+          )
         ],
-      ),
+      )
     );
   }
 

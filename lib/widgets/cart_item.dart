@@ -8,21 +8,41 @@ class CartItem extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+    // return InkWell(
+    //   child: Row(
+    //     children: [
+    //       Image(
+    //         image: NetworkImage(model.image),
+    //         width: 100,
+    //         height: 100,
+    //       ),
+    //       Column(
+    //         children: [
+    //           Text(model.ten),
+    //           Text(model.gia.toString()),
+    //         ],
+    //       ),
+    //     ],),
+    //   onTap: (){},
+    // );
     return InkWell(
-      child: Row(
-        children: [
-          Image(
-            image: NetworkImage(model.image),
-            width: 100,
-            height: 100,
-          ),
-          Column(
+      child: Card(
+        child: Row(
             children: [
-              Text(model.ten),
-              Text(model.gia.toString()),
+              Image(
+                image: NetworkImage(model.image),
+                width: 100,
+                height: 100,
+              ),
+              Column(
+                children: [
+                  Text(model.ten),
+                  Text(model.gia.toString()),
+                ],
+              ),
             ],
-          ),
-        ],),
+        ),
+      ),
       onTap: (){},
     );
   }

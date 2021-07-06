@@ -19,9 +19,30 @@ class _OnlineSupportScreenState extends State<OnlineSupportScreen>{
       appBar: AppBar(
         title: Text('Tư Vấn'),
       ),
-      body: Center(
-        child: Text('2'),
-      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Center(),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                Flexible(child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Yêu cầu tư vấn ...",
+                    hintStyle: TextStyle(
+                      color: Colors.grey,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                )),
+                IconButton(onPressed: (){}, icon: Icon(Icons.send)),
+              ],
+            ),
+          )
+        ],
+      )
     );
   }
 }
