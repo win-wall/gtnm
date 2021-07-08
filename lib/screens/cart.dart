@@ -3,6 +3,7 @@ import 'package:gtnm/models/product_model.dart';
 import 'package:gtnm/screens/payment.dart';
 import 'package:gtnm/ultis/global.dart';
 import 'package:gtnm/ultis/loadJson.dart';
+import 'package:gtnm/ultis/money_format.dart';
 import 'package:gtnm/widgets/cart_item.dart';
 
 class CartScreen extends StatefulWidget {
@@ -26,7 +27,6 @@ class _CartScreenState extends State<CartScreen>{
 
   @override
   Widget build(BuildContext context) {
-    _total = 0;
     return Scaffold(
       appBar: AppBar(
         title: Text('Giỏ Hàng'),
@@ -42,6 +42,7 @@ class _CartScreenState extends State<CartScreen>{
           builder: (context, AsyncSnapshot<List<ProductModel>> snapshot) {
             if (!snapshot.hasData)
               return Center(child: CircularProgressIndicator(),);
+            _total = 0;
             return Column(
               children: [
                 Expanded(
@@ -55,15 +56,17 @@ class _CartScreenState extends State<CartScreen>{
                 Container(
                     padding: EdgeInsets.all(10),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Expanded(
-                          child: Text(
-                            _total.toString(),
+                        Text('Tổng cộng:'),
+                        SizedBox(width: 10,),
+                        Text(
+                            toMoney(_total.toDouble()),
                             style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
+                              fontWeight: FontWeight.bold,
+                            )
                         ),
+                        SizedBox(width: 10,),
                         ElevatedButton(
                           child: Text('Thanh Toán'),
                           onPressed: (){
