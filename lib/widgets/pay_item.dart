@@ -15,10 +15,13 @@ class PayItem extends StatelessWidget{
           padding: EdgeInsets.all(10),
           child: Row(
             children: [
-              Image(
-                image: NetworkImage(model.image),
-                width: 100,
-                height: 100,
+              Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                height: MediaQuery.of(context).size.width * 0.3,
+                child: Image(
+                  image: NetworkImage(model.image),
+                  fit: BoxFit.contain
+                ),
               ),
               SizedBox(width: 10,),
               Expanded(
@@ -28,12 +31,12 @@ class PayItem extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(model.ten,),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 16,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(toMoney(model.gia.toDouble()), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),),
-                          Text('Số lượng: ' + model.soluong.toString(), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),),
+                          Text(toMoney(model.gia.toDouble()), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
+                          Text('Số lượng: ' + model.soluong.toString(), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
                         ],
                       ),
                       
