@@ -13,6 +13,10 @@ class _SearchScreenState extends State<SearchScreen>{
     super.initState();
   }
 
+  void _search(String value){
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +25,7 @@ class _SearchScreenState extends State<SearchScreen>{
         shadowColor: Colors.transparent,
         title: TextField(
           autofocus: true,
+          onSubmitted: _search,
         ),
         leading: BackButton(
           color: Colors.black,
