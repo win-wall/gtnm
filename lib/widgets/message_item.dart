@@ -10,7 +10,7 @@ class MessageItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+        padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
         alignment: model.from == 'supporter'? Alignment.centerLeft : Alignment.centerRight,
         width: double.infinity,
         child: Container(

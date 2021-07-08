@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gtnm/models/app_model.dart';
 import 'package:gtnm/models/product_model.dart';
 import 'package:gtnm/ultis/loadJson.dart';
+import 'package:gtnm/widgets/category_item.dart';
 import 'package:gtnm/widgets/product_item.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -35,7 +36,7 @@ class _ExploreScreenState extends State<ExploreScreen> with TickerProviderStateM
     if(change){      
       print('load ' + _currentCategory);
       var list = await loadProductData();
-      _products = list.where((element) => true).toList();
+      _products = _currentCategory == 'hot'? list.sublist(0,10) : list.where((item) => item.category == _currentCategory).toList();
       _toTab(_currentCategory);
     }
     return _products;
@@ -75,11 +76,11 @@ class _ExploreScreenState extends State<ExploreScreen> with TickerProviderStateM
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(  
           childAspectRatio: 3/4,
           crossAxisCount: 2,
-          crossAxisSpacing: 5.0,  
-          mainAxisSpacing: 5.0  
+          crossAxisSpacing: 5,  
+          mainAxisSpacing: 5, 
       ),  
-      itemBuilder: (BuildContext context, int index){  
-        return ProductItem(model: products[index],);
+      itemBuilder: (BuildContext context, int index){ 
+        return CategoryItem(model: products[index],);
       },
     );
   }
@@ -99,11 +100,13 @@ class _ExploreScreenState extends State<ExploreScreen> with TickerProviderStateM
               return Column(
                 children: [
                   Container(
+                    color: Theme.of(context).backgroundColor,
                     child: TabBar(
                       isScrollable: true,
+                      indicatorColor: Theme.of(context).accentColor,
                       controller: _tabController,
                       indicator: BoxDecoration(
-                        color: Colors.blue,
+                        color: Theme.of(context).accentColor,
                       ),
                       labelColor: Colors.white,
                       unselectedLabelColor: Colors.black,
@@ -121,7 +124,10 @@ class _ExploreScreenState extends State<ExploreScreen> with TickerProviderStateM
                     ),
                   ),
                   Expanded(
-                    child: _ItemList(_products)
+                    child:  Container(
+                      padding: EdgeInsets.all(10),
+                      child: _ItemList(_products)
+                    ),
                   )
                 ]
               );

@@ -16,14 +16,14 @@ class _OnlineSupportScreenState extends State<OnlineSupportScreen>{
   @override
   void initState() {
     super.initState();
-    _message .add(MessageModel(
+    _message.insert(0, MessageModel(
       content: 'Xin chào, chúng tôi có thể giúp gì cho bạn?', 
       from: 'supporter'));
   }
 
   void _send(){
     setState(() {
-      _message .add(MessageModel(
+      _message.insert(0, MessageModel(
       content: _textEditingController.text, 
       from: 'user'));
     });
@@ -41,12 +41,14 @@ class _OnlineSupportScreenState extends State<OnlineSupportScreen>{
         children: [
           Expanded(
             child: ListView(
+              reverse: true,
               children: _message.map((mes) {
                 return MessageItem(model: mes);
               }).toList(),
             )
           ),
           Container(
+            color: Theme.of(context).backgroundColor,
             padding: EdgeInsets.all(10),
             child: Row(
               children: [
@@ -55,7 +57,6 @@ class _OnlineSupportScreenState extends State<OnlineSupportScreen>{
                   decoration: InputDecoration(
                     hintText: "Yêu cầu tư vấn ...",
                     hintStyle: TextStyle(
-                      color: Colors.grey,
                       fontStyle: FontStyle.italic,
                     ),
                   ),
