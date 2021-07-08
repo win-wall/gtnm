@@ -32,7 +32,7 @@ class CategoryItem extends StatelessWidget{
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 10,),
-                  Text(model.ten, style: TextStyle(fontSize: 16),),
+                  Text(model.ten, style: TextStyle(fontSize: 16),maxLines: 1, overflow: TextOverflow.ellipsis,),
                   SizedBox(height: 10,),
                   Text(toMoney(model.gia.toDouble()),
                   style: TextStyle(fontWeight: FontWeight.bold),),

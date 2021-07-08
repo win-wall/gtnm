@@ -35,39 +35,41 @@ class _CartItemState extends State<CartItem>{
                   ),
                 ),
                 SizedBox(width: 10,),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(widget.model.ten, style: TextStyle(fontSize: 16),),
-                    SizedBox(height: 10,),
-                    Text(toMoney(widget.model.gia.toDouble()),style: TextStyle(fontWeight: FontWeight.bold),),
-                    SizedBox(height: 10,),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        InkWell(onTap: (){
-                          setState(() {
-                            widget.model.soluong--;
-                          });
-                        }, child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                          child: Text('-'))),
-                        SizedBox(width: 10,),
-                        Container(
-                          padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                          child: Text(widget.model.soluong.toString())),
-                        SizedBox(width: 10,),
-                        InkWell(onTap: (){
-                          setState(() {
-                            widget.model.soluong++;
-                          });
-                        }, child: Container(
-                          padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                          child:Text('+'))),
-                      ],
-                    ),
-                  ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(widget.model.ten, style: TextStyle(fontSize: 16), maxLines: 1, overflow: TextOverflow.ellipsis,),
+                      SizedBox(height: 10,),
+                      Text(toMoney(widget.model.gia.toDouble()),style: TextStyle(fontWeight: FontWeight.bold),),
+                      SizedBox(height: 10,),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          InkWell(onTap: (){
+                            setState(() {
+                              widget.model.soluong--;
+                            });
+                          }, child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            child: Text('-'))),
+                          SizedBox(width: 10,),
+                          Container(
+                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            child: Text(widget.model.soluong.toString())),
+                          SizedBox(width: 10,),
+                          InkWell(onTap: (){
+                            setState(() {
+                              widget.model.soluong++;
+                            });
+                          }, child: Container(
+                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            child:Text('+'))),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ],
           ),
