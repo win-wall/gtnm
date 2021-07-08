@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtnm/models/product_model.dart';
+import 'package:gtnm/ultis/global.dart';
 import 'package:gtnm/ultis/loadJson.dart';
+import 'package:gtnm/ultis/money_format.dart';
 import 'package:gtnm/widgets/pay_item.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -62,7 +64,6 @@ class _PaymentScreenState extends State<PaymentScreen>{
 
   @override
   Widget build(BuildContext context) {
-    _total = _tax = 0;
     return Scaffold(
       appBar: AppBar(
         title: Text('Thanh Toán'),
@@ -73,6 +74,7 @@ class _PaymentScreenState extends State<PaymentScreen>{
           if (!snapshot.hasData)
           return Center(child: CircularProgressIndicator(),);
           print(snapshot.data!.length);
+          _total = _tax = 0;
           return Column(
               children: [
                 Expanded(
@@ -84,7 +86,7 @@ class _PaymentScreenState extends State<PaymentScreen>{
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Thong tin lien he', style: TextStyle(fontWeight: FontWeight.bold),),
+                              Text('Thông tin liên hệ', style: TextStyle(fontWeight: FontWeight.bold),),
                               SizedBox(height: 10,),
                               InkWell(
                                 child: Container(
@@ -97,10 +99,10 @@ class _PaymentScreenState extends State<PaymentScreen>{
                                   child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text('Ho ten'),
-                                        Text('Dia chi'),
-                                        Text('So dien thoai'),
-                                        Text('ghi chu'),
+                                        Text('Họ tên: ' + global_user.hoten),
+                                        Text('Địa chỉ: ' + global_user.diachi),
+                                        Text('Số điện thoại: ' + global_user.sdt),
+                                        Text('ghi chú: ' + global_user.ghichu),
                                       ]
                                   ),
                                 ),
@@ -122,7 +124,7 @@ class _PaymentScreenState extends State<PaymentScreen>{
                                 shrinkWrap: true,
                                 physics: ScrollPhysics(),
                                 children: snapshot.data!.map((item) {
-                                  _total += item.gia;
+                                  _total += item.gia * item.soluong;
                                   _tax = (_total * 0.1).toInt();
                                   return PayItem(model: item);
                                 }).toList(),
@@ -161,21 +163,21 @@ class _PaymentScreenState extends State<PaymentScreen>{
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text('Thành tiền'),
-                                  Text(_total.toString()),
+                                  Text(toMoney(_total.toDouble())),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text('Tax'),
-                                  Text(_tax.toString()),
+                                  Text(toMoney(_tax.toDouble())),
                                 ],
                               ),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text('Tong cong'),
-                                  Text((_total + _tax).toString()),
+                                  Text('Tổng cộng'),
+                                  Text(toMoney((_total + _tax).toDouble())),
                                 ],
                               ),
                             ],
@@ -193,7 +195,7 @@ class _PaymentScreenState extends State<PaymentScreen>{
                       Text('Tổng cộng:'),
                       SizedBox(width: 10,),
                       Text(
-                          (_total + _tax).toString().toString(),
+                          toMoney((_total + _tax).toDouble()),
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                           )

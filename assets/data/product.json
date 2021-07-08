@@ -4,41 +4,47 @@
     "ten": "Hang hoa 1",
     "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "",
+    "soluong": "1"
   },
   {
     "id": "2",
     "ten": "Hang hoa 1",
     "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "",
+    "soluong": "1"
   },
   {
     "id": "3",
     "ten": "Hang hoa 1",
     "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "",
+    "soluong": "1"
   },
   {
     "id": "4",
     "ten": "Hang hoa 1",
     "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "",
+    "soluong": "1"
   },
   {
     "id": "5",
     "ten": "Hang hoa 1",
     "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "",
+    "soluong": "1"
   },
   {
     "id": "6",
     "ten": "Hang hoa 1",
     "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "",
+    "soluong": "1"
   }
 ]
