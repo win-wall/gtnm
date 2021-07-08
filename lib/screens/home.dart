@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>{
+class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
@@ -25,43 +25,42 @@ class _HomeScreenState extends State<HomeScreen>{
   }
 
   // ignore: non_constant_identifier_names
-  Widget _ItemList(List<ProductModel> products){
-    return GridView.builder(
+  Widget _ItemList(List<ProductModel> products) {
+    return Container(
+        child: GridView.builder(
       shrinkWrap: true,
       physics: ScrollPhysics(),
       itemCount: products.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(  
-          childAspectRatio: 3/4,
-          crossAxisCount: 2,
-          crossAxisSpacing: 5.0,  
-          mainAxisSpacing: 5.0  
-      ),  
-      itemBuilder: (BuildContext context, int index){  
-        return ProductItem(model: products[index],);
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: 1.8,
+          crossAxisCount: 1,
+          crossAxisSpacing: 5.0,
+          mainAxisSpacing: 5.0),
+      itemBuilder: (BuildContext context, int index) {
+        return ProductItem(
+          model: products[index],
+        );
       },
-    );
+    ));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(
-        future: _loadProduct(),
-        builder: (context, AsyncSnapshot<List<ProductModel>> snapshot) {
-          if (!snapshot.hasData)
-            return Center(child: CircularProgressIndicator(),);
-          return Padding(
-              padding: EdgeInsets.all(10),
-              child: ListView(
-                  children: [
+        body: FutureBuilder(
+            future: _loadProduct(),
+            builder: (context, AsyncSnapshot<List<ProductModel>> snapshot) {
+              if (!snapshot.hasData)
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              return Padding(
+                  padding: EdgeInsets.all(10),
+                  child: ListView(children: [
                     SaleBanner(),
                     SizedBox(height: 10),
                     _ItemList(snapshot.data!),
-                  ]
-              )
-          );
-        }
-      )
-    );
+                  ]));
+            }));
   }
 }
