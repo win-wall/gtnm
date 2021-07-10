@@ -1,170 +1,172 @@
 [
   {
     "id": "1",
-    "ten": "Hang hoa 1",
-    "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
-    "gia": "100000",
-
-    "category": "Bo mạch chủ",
-
+    "ten": "Laptop Acer Nitro 5 AN515 45 R3SM R5 5600H/8GB/512GB/4GB GTX1650/144Hz/Balo/Win10 (NH.QBMSV.005)",
+    "image": "https://cdn.tgdd.vn/Products/Images/44/237636/acer-nitro-5-an515-45-r3sm-r5-nhqbmsv005-600x600.jpg",
+    "gia": "21840000",
     "category": "laptop",
     "soluong": "1"
 
   },
   {
     "id": "2",
-    "ten": "Hang hoa 2",
-    "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
-    "gia": "100000",
-
-    "category": "Bla",
-
+    "ten": "Laptop Acer Aspire 7 A715 42G R4ST R5 5500U/8GB/256GB/4GB GTX1650/Win10 (NH.QAYSV.004)",
+    "image": "https://cdn.tgdd.vn/Products/Images/44/235405/acer-aspire-7-a715-42g-r4st-r5-nhqaysv004-16-600x600.jpg",
+    "gia": "18590000",
     "category": "laptop",
     "soluong": "1"
 
   },
   {
     "id": "3",
-    "ten": "Hang hoa 1",
-    "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
-    "gia": "100000",
+    "ten": "AMD Ryzen 7 3700x /36MB /3.6GHz /8 nhân 16 luồng",
+    "image": "https://product.hstatic.net/1000026716/product/ryzen_7_gen3_gearvn_e57dcfb17d714ba290fda9c2bb970916.jpg",
+    "gia": "8490000",
     "category": "linh kien",
     "soluong": "1"
   },
   {
     "id": "4",
-    "ten": "Hang hoa 1",
-    "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
-    "gia": "100000",
+    "ten": "(8GB DDR4 1x8G 3000) RAM G.SKILL Trident Z RGB CL16-18-18-38",
+    "image": "https://product.hstatic.net/1000026716/product/anyconv.com__trident_z_gearvn00_large_9ffcc7aed66c450ea6a128ea85aec02b.jpg",
+    "gia": "1650000",
     "category": "linh kien",
     "soluong": "1"
   },
   {
     "id": "5",
-    "ten": "Hang hoa 1",
-    "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
-    "gia": "100000",
+    "ten": "Laptop HP Omen 15 ek0079TX i7 10750H/16GB/1TB SSD/6GB RTX2060/300Hz/Office H&S2019/Win10 (26Y69PA)",
+    "image": "https://cdn.tgdd.vn/Products/Images/44/236427/hp-omen-15-ek0079tx-i7-26y69pa-600x600.jpg",
+    "gia": "51140000",
     "category": "laptop",
     "soluong": "1"
   },
   {
     "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
-    "gia": "100000",
+    "ten": "Pin sạc dự phòng Polymer 10.000 mAh Lightning eValu PJ JP189SL",
+    "image": "https://cdn.tgdd.vn/Products/Images/57/224983/sac-du-phong-10000mah-lightning-evalu-pj-jp189sl-avatar-1-600x600.jpg",
+    "gia": "380000",
     "category": "phu kien",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "7",
+    "ten": "Chuột Logitech G102 Lightsync RGB Black",
+    "image": "https://product.hstatic.net/1000026716/product/logitech-g102-lightsync-rgb-black-1_bf4f5774229c4a0f81b8e8a2feebe4d8.jpg",
+    "gia": "400000",
     "category": "chuot phim",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "8",
+    "ten": "Chuột Razer Deathadder Essential",
+    "image": "https://product.hstatic.net/1000026716/product/da_e_01_8347be5a11f14bf48e1a472ae080a1c1_be824480da3f4c30b4b15a68f0fd058b.jpg",
+    "gia": "690000",
     "category": "chuot phim",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "9",
+    "ten": "Tai nghe Gaming Logitech G Pro Gen 2",
+    "image": "https://product.hstatic.net/1000026716/product/tai-nghe-gaming-logitech-g-pro-gen-2-1_d20d0ae9b42e4c13803cb2c9936b2096.png",
+    "gia": "1890000",
     "category": "tai loa",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "10",
+    "ten": "Tai nghe True Wireless Jabra Elite 85t",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn-tai-nghe-true-wireless-jabra-elite-85t-666_b8ae9c731368449aa027d4200f011de7.jpg",
+    "gia": "5990000",
     "category": "tai loa",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "11",
+    "ten": " Tay cầm chơi game Xbox One S",
+    "image": "https://hanoigame.vn/image/cache/data/X1/tay%20xbox%20one%20s%20gears%205a-800x800.jpg",
+    "gia": "1950000",
     "category": "console",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "12",
+    "ten": "Tay cầm PS5 DualSense",
+    "image": "https://product.hstatic.net/1000026716/product/sony_dualsense_ps5_01_l_ba9c28b0714d487ba11fd5914cdc1900_large.jpg",
+    "gia": "1990000",
     "category": "console",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "13",
+    "ten": "Máy chơi Game Sony Playstation 5 Standard Edition",
+    "image": "https://product.hstatic.net/1000026716/product/sony-ps5_4cd29cf31c794b42b68aff9c67487d73_large.jpg",
+    "gia": "17000000",
     "category": "console",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "14",
+    "ten": "Màn hình cong Samsung LC27RG50FQE 27' VA 240Hz Freesync",
+    "image": "https://product.hstatic.net/1000026716/product/samsung_lc27rg50fqe_gearvn_fb7f045c149a4bb6a2c7f2a927f47be0.jpg",
+    "gia": "6990000",
     "category": "man hinh",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "15",
+    "ten": "Màn hình ASUS ProArt PA279CV 27' IPS 4K chuyên đồ họa",
+    "image": "https://product.hstatic.net/1000026716/product/avatar_9b3a8c5c850740eca9b8331453044a2a.jpg",
+    "gia": "13490000",
     "category": "man hinh",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "16",
+    "ten": "GIGABYTE Z590 VISION G (rev. 1.0)",
+    "image": "https://product.hstatic.net/1000026716/product/z590_vision_g_01_daaeea135e8c4e3191ad6f403bc6b7e0.png",
+    "gia": "6690000",
     "category": "linh kien",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "17",
+    "ten": "MSI GeForce RTX™ 2060 GAMING Z 6G GDDR6",
+    "image": "https://product.hstatic.net/1000026716/product/rtx_2060_gamingz_gearvn00.jpg",
+    "gia": "21990000",
     "category": "linh kien",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "18",
+    "ten": "Laptop Apple MacBook Air M1 2020 8GB/512GB/Gold (MGNE3SA/A)",
+    "image": "https://cdn.tgdd.vn/Products/Images/44/243952/apple-macbook-air-m1-2020-16gb-512gb-gold-600x600.jpg",
+    "gia": "32540000",  
     "category": "laptop",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "18",
+    "ten": "Loa Logitech Z607 5.1",
+    "image": "https://product.hstatic.net/1000026716/product/1111.png",
+    "gia": "2490000",
     "category": "tai loa",
     "soluong": "1"
   },
   {
-    "id": "6",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
+    "id": "20",
+    "ten": "Webcam 1440p Rapoo C280",
+    "image": "https://cdn.tgdd.vn/Products/Images/4728/242329/webcam-1440p-rapoo-c280-1-org.jpg",
+    "gia": "1190000",
     "category": "phu kien",
+    "soluong": "1"
+  },
+  {
+    "id": "21",
+    "ten": "Bàn phím Corsair K68 RGB",
+    "image": "https://product.hstatic.net/1000026716/product/gearvn-corsair-k68-rgb_01.png",
+    "gia": "2750000",
+    "category": "chuot phim",
     "soluong": "1"
   }
 ]

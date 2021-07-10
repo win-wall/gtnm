@@ -1,5 +1,5 @@
 class AppModel{
-  String currentCatogary = 'noi bat';
+  String currentCatogary = 'hot';
 }
 
 AppModel m_appState = AppModel();
