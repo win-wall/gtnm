@@ -23,6 +23,8 @@ environment:
 dependencies:
   auto_size_text: ^2.1.0
   flutter_rating_bar: ^4.0.0
+  flutter_svg: ^0.22.0
+  
   flutter:
     sdk: flutter
 
@@ -55,6 +57,10 @@ flutter:
   assets:
     - assets/data/product.json
     - assets/data/cart.json
+    - assets/data/back.svg
+    - assets/data/cart.svg
+    - assets/data/user.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
