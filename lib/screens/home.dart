@@ -27,18 +27,21 @@ class _HomeScreenState extends State<HomeScreen> {
   // ignore: non_constant_identifier_names
   Widget _ItemList(List<ProductModel> products) {
     return Container(
-        child: GridView.builder(
+        child: ListView.builder(
       shrinkWrap: true,
       physics: ScrollPhysics(),
       itemCount: products.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          childAspectRatio: 1.8,
-          crossAxisCount: 1,
-          crossAxisSpacing: 5.0,
-          mainAxisSpacing: 5.0),
+      // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      //     childAspectRatio: 1.8,
+      //     crossAxisCount: 1,
+      //     crossAxisSpacing: 5.0,
+      //     mainAxisSpacing: 5.0),
       itemBuilder: (BuildContext context, int index) {
-        return ProductItem(
-          model: products[index],
+        return Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: ProductItem(
+            model: products[index],
+          ),
         );
       },
     ));

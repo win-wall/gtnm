@@ -1,18 +1,18 @@
 [
   {
-    "id": "1",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
-    "category": "",
+    "id": "12",
+    "ten": "Tay cầm PS5 DualSense",
+    "image": "https://product.hstatic.net/1000026716/product/sony_dualsense_ps5_01_l_ba9c28b0714d487ba11fd5914cdc1900_large.jpg",
+    "gia": "1990000",
+    "category": "console",
     "soluong": "1"
   },
   {
-    "id": "2",
-    "ten": "Hang hoa 1",
-    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
-    "gia": "100000",
-    "category": "",
-    "soluong": "2"
+    "id": "13",
+    "ten": "Máy chơi Game Sony Playstation 5 Standard Edition",
+    "image": "https://product.hstatic.net/1000026716/product/sony-ps5_4cd29cf31c794b42b68aff9c67487d73_large.jpg",
+    "gia": "17000000",
+    "category": "console",
+    "soluong": "1"
   }
 ]

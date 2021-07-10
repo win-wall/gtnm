@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gtnm/screens/app.dart';
-import 'package:gtnm/ultis/loadJson.dart';
 import 'package:gtnm/ultis/theme.dart';
 
-void main(){
+Future<void> main() async{
   runApp(MyApp());
 }
 

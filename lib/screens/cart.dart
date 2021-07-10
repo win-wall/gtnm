@@ -48,8 +48,11 @@ class _CartScreenState extends State<CartScreen>{
                 Expanded(
                   child: ListView(
                     children: snapshot.data!.map((item) {
-                      _total += item.gia;
-                      return CartItem(model: item);
+                      _total += item.gia * item.soluong;
+                      return Container(
+                        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        child: CartItem(model: item)
+                      );
                     }).toList(),
                   ),
                 ),
