@@ -186,7 +186,9 @@ class ProductItem extends StatelessWidget {
           )),
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => DetailScreen()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => DetailScreen(model1: model)));
       },
     )));
     /* child: InkWell(
