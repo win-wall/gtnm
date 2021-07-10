@@ -3,15 +3,23 @@ import 'package:gtnm/models/product_model.dart';
 import 'package:gtnm/screens/detail.dart';
 import 'package:gtnm/ultis/money_format.dart';
 
+
+typedef _SoLuongCallback(int);
+typedef _SelectCallback(bool);
+
 class CartItem extends StatefulWidget {
-  CartItem({Key? key ,required this.model}) : super(key: key);
+  CartItem({Key? key ,required this.model, required this.onSoLuong, required this.onSelect}) : super(key: key);
+
   ProductModel model;
+  _SoLuongCallback onSoLuong;
+  _SelectCallback onSelect;
 
   @override
   _CartItemState createState() => _CartItemState();
 }
 
-class _CartItemState extends State<CartItem>{  
+class _CartItemState extends State<CartItem>{
+  bool _selected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +30,13 @@ class _CartItemState extends State<CartItem>{
           child: Row(
               children: [
                 Checkbox(
-                  value: false, 
-                  onChanged: (val){}
+                  value: _selected,
+                  onChanged: (val){
+                    setState(() {
+                      _selected = val!;
+                    });
+                    widget.onSelect(_selected);
+                  }
                 ),
                 Container(
                   // decoration: BoxDecoration(border: Border.all()),
@@ -47,25 +60,26 @@ class _CartItemState extends State<CartItem>{
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          InkWell(onTap: (){
-                            setState(() {
-                              widget.model.soluong--;
-                            });
-                          }, child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                            child: Text('-'))),
-                          SizedBox(width: 10,),
-                          Container(
-                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                            child: Text(widget.model.soluong.toString())),
-                          SizedBox(width: 10,),
-                          InkWell(onTap: (){
-                            setState(() {
-                              widget.model.soluong++;
-                            });
-                          }, child: Container(
-                            padding: EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                            child:Text('+'))),
+                          IconButton(
+                            icon: Icon(Icons.remove_circle),
+                            onPressed: () {
+                              setState(() {
+                                if(widget.model.soluong > 1)
+                                  widget.model.soluong--;
+                              });
+                              widget.onSoLuong(widget.model.soluong);
+                            },
+                          ),
+                          Text(widget.model.soluong.toString()),
+                          IconButton(
+                            icon: Icon(Icons.add_circle),
+                            onPressed: () {
+                              setState(() {
+                                widget.model.soluong++;
+                              });
+                              widget.onSoLuong(widget.model.soluong);
+                            },
+                          ),
                         ],
                       ),
                     ],

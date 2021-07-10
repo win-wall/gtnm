@@ -15,6 +15,7 @@ class CartScreen extends StatefulWidget {
 
 class _CartScreenState extends State<CartScreen>{
   int _total = 0;
+  List<String> _selected = [];
 
   @override
   void initState() {
@@ -22,7 +23,16 @@ class _CartScreenState extends State<CartScreen>{
   }
 
   Future<List<ProductModel>> _loadCart() async {
-    return  await loadCartData();
+    // return  await loadCartData();
+    return m_cart;
+  }
+
+  Future<List<ProductModel>> _getPaymentList() async{
+    List<ProductModel> list = [];
+    for(var item in m_cart){
+      if(_selected.contains(item.id)) list.add(item);
+    }
+    return list;
   }
 
   @override
@@ -48,10 +58,19 @@ class _CartScreenState extends State<CartScreen>{
                 Expanded(
                   child: ListView(
                     children: snapshot.data!.map((item) {
-                      _total += item.gia * item.soluong;
+                      if(_selected.contains(item.id)) {
+                        _total += (item.gia * item.soluong) as int;
+                      }
                       return Container(
                         padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                        child: CartItem(model: item)
+                        child: CartItem(
+                          model: item,
+                          onSoLuong: (value) => setState((){}),
+                          onSelect: (value) => setState((){
+                            if(value) _selected.add(item.id);
+                            else _selected.remove(item.id);
+                          })
+                        )
                       );
                     }).toList(),
                   ),
@@ -72,8 +91,10 @@ class _CartScreenState extends State<CartScreen>{
                         SizedBox(width: 10,),
                         ElevatedButton(
                           child: Text('Thanh Toán'),
-                          onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen()));
+                          onPressed: () async {
+                            _getPaymentList().then((value) {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentScreen(list: value,)));
+                            });
                           },
                         ),
                       ],

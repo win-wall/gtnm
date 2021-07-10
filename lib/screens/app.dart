@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gtnm/models/app_model.dart';
 import 'package:gtnm/screens/account.dart';
 import 'package:gtnm/screens/cart.dart';
 import 'package:gtnm/screens/explore.dart';
 import 'package:gtnm/screens/home.dart';
 import 'package:gtnm/screens/login.dart';
 import 'package:gtnm/screens/online_support.dart';
+import 'package:gtnm/ultis/global.dart';
 import 'package:gtnm/widgets/search_bar.dart';
 
 class AppScreen extends StatefulWidget {
@@ -43,7 +43,7 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
   void _selectCategory(String category){
     _openDrawer();
     _tabController.animateTo(1);
-    m_appState.currentCatogary = category;
+    m_app.currentCatogary = category;
   }
 
   // ignore: non_constant_identifier_names
@@ -157,10 +157,11 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
                     });
                   },
                   child: Tab(
-                    icon: Icon(Icons.water_damage),
+                    icon: Icon(Icons.water_damage, color: Colors.white,),
                     child: Text(
                         'Trang Chủ',
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: 10,
                         )
                     ),
@@ -174,10 +175,11 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
                     });
                   },
                   child: Tab(
-                    icon: Icon(Icons.volunteer_activism),
+                    icon: Icon(Icons.volunteer_activism, color: Colors.white,),
                     child: Text(
                         'Khám Phá',
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: 10,
                         )
                     ),
@@ -188,10 +190,11 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
                   },
                   child: Tab(
-                    icon: Icon(Icons.add_shopping_cart),
+                    icon: Icon(Icons.add_shopping_cart, color: Colors.white,),
                     child: Text(
                         'Giỏ Hàng',
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: 10,
                         )
                     ),
@@ -202,10 +205,11 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => OnlineSupportScreen()));
                   },
                   child: Tab(
-                    icon: Icon(Icons.message),
+                    icon: Icon(Icons.message, color: Colors.white,),
                     child: Text(
                         'Tư Vấn',
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: 10,
                         )
                     ),
@@ -217,10 +221,11 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
                     //Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   child: Tab(
-                    icon: Icon(Icons.account_circle),
+                    icon: Icon(Icons.account_circle, color: Colors.white,),
                     child: Text(
                         'Tài Khoản',
                         style: TextStyle(
+                          color: Colors.white,
                           fontSize: 10,
                         )
                     ),

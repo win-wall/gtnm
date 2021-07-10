@@ -20,8 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<List<ProductModel>> _loadProduct() async {
-    print('load');
-    return await loadProductData();
+    // return await loadProductData();
+    return m_products;
   }
 
   // ignore: non_constant_identifier_names
