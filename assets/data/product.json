@@ -4,41 +4,167 @@
     "ten": "Hang hoa 1",
     "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
     "gia": "100000",
-    "category": "Bo mạch chủ"
+
+    "category": "Bo mạch chủ",
+
+    "category": "laptop",
+    "soluong": "1"
+
   },
   {
     "id": "2",
     "ten": "Hang hoa 2",
     "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
     "gia": "100000",
-    "category": "Bla"
+
+    "category": "Bla",
+
+    "category": "laptop",
+    "soluong": "1"
+
   },
   {
     "id": "3",
     "ten": "Hang hoa 1",
     "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "linh kien",
+    "soluong": "1"
   },
   {
     "id": "4",
     "ten": "Hang hoa 1",
     "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "linh kien",
+    "soluong": "1"
   },
   {
     "id": "5",
     "ten": "Hang hoa 1",
     "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "laptop",
+    "soluong": "1"
   },
   {
     "id": "6",
     "ten": "Hang hoa 1",
     "image": "https://cdn.mos.cms.futurecdn.net/cRAUCKA4WKjfgMAU5Lzfdg-1200-80.jpg",
     "gia": "100000",
-    "category": ""
+    "category": "phu kien",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "chuot phim",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "chuot phim",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "tai loa",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "tai loa",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "console",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "console",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "console",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "man hinh",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "man hinh",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "linh kien",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "linh kien",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "laptop",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "tai loa",
+    "soluong": "1"
+  },
+  {
+    "id": "6",
+    "ten": "Hang hoa 1",
+    "image": "http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg",
+    "gia": "100000",
+    "category": "phu kien",
+    "soluong": "1"
   }
 ]

@@ -144,87 +144,90 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              TextButton(
-                onPressed: (){
-                  _tabController.animateTo(0);
-                  setState(() {
-                    _currentIndex = 0;
-                  });
-                },
-                child: Tab(
-                  icon: Icon(Icons.water_damage),
-                  child: Text(
-                      'Trang Chủ',
-                      style: TextStyle(
-                        fontSize: 10,
-                      )
+          Container(
+            color: Theme.of(context).backgroundColor,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(
+                  onPressed: (){
+                    _tabController.animateTo(0);
+                    setState(() {
+                      _currentIndex = 0;
+                    });
+                  },
+                  child: Tab(
+                    icon: Icon(Icons.water_damage),
+                    child: Text(
+                        'Trang Chủ',
+                        style: TextStyle(
+                          fontSize: 10,
+                        )
+                    ),
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: (){
-                  _tabController.animateTo(1);
-                  setState(() {
-                    _currentIndex = 1;
-                  });
-                },
-                child: Tab(
-                  icon: Icon(Icons.volunteer_activism),
-                  child: Text(
-                      'Khám Phá',
-                      style: TextStyle(
-                        fontSize: 10,
-                      )
+                TextButton(
+                  onPressed: (){
+                    _tabController.animateTo(1);
+                    setState(() {
+                      _currentIndex = 1;
+                    });
+                  },
+                  child: Tab(
+                    icon: Icon(Icons.volunteer_activism),
+                    child: Text(
+                        'Khám Phá',
+                        style: TextStyle(
+                          fontSize: 10,
+                        )
+                    ),
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
-                },
-                child: Tab(
-                  icon: Icon(Icons.add_shopping_cart),
-                  child: Text(
-                      'Giỏ Hàng',
-                      style: TextStyle(
-                        fontSize: 10,
-                      )
+                TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+                  },
+                  child: Tab(
+                    icon: Icon(Icons.add_shopping_cart),
+                    child: Text(
+                        'Giỏ Hàng',
+                        style: TextStyle(
+                          fontSize: 10,
+                        )
+                    ),
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnlineSupportScreen()));
-                },
-                child: Tab(
-                  icon: Icon(Icons.message),
-                  child: Text(
-                      'Tư Vấn',
-                      style: TextStyle(
-                        fontSize: 10,
-                      )
+                TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => OnlineSupportScreen()));
+                  },
+                  child: Tab(
+                    icon: Icon(Icons.message),
+                    child: Text(
+                        'Tư Vấn',
+                        style: TextStyle(
+                          fontSize: 10,
+                        )
+                    ),
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
-                  //Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-                child: Tab(
-                  icon: Icon(Icons.account_circle),
-                  child: Text(
-                      'Tài Khoản',
-                      style: TextStyle(
-                        fontSize: 10,
-                      )
+                TextButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
+                    //Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
+                  child: Tab(
+                    icon: Icon(Icons.account_circle),
+                    child: Text(
+                        'Tài Khoản',
+                        style: TextStyle(
+                          fontSize: 10,
+                        )
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
         ],
       ),// This trailing comma makes auto-formatting nicer for build methods.

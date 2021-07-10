@@ -3,13 +3,15 @@ class ProductModel {
   final String ten;
   final String image;
   final String category;
+  int soluong;
   int gia;  
   ProductModel({
     required this.id,
     required this.ten,
     required this.image,
     required this.category,
-    required this.gia,
+    this.gia = 0,
+    this.soluong = 1,
     }
   );
 
@@ -20,6 +22,7 @@ class ProductModel {
         image: parsedJson['image'].toString(),
         category: parsedJson['category'].toString(),
         gia: int.parse(parsedJson['gia']),
+        soluong: int.parse(parsedJson['soluong']),
     );
   }
 }
