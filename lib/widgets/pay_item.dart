@@ -30,7 +30,7 @@ class PayItem extends StatelessWidget{
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(model.ten,),
+                      Text(model.ten, maxLines: 3, overflow: TextOverflow.ellipsis,),
                       SizedBox(height: 16,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

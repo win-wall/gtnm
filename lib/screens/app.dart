@@ -151,7 +151,7 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
               },
           ),
           _BottomButton(
-              text: 'Khám Phá',
+              text: 'Sản Phẩm',
               icon: Icons.volunteer_activism,
               onPressed: (){
                 _tabController.animateTo(1);

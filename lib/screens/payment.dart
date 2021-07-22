@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gtnm/models/product_model.dart';
+import 'package:gtnm/screens/success.dart';
 import 'package:gtnm/ultis/global.dart';
 import 'package:gtnm/ultis/loadJson.dart';
 import 'package:gtnm/ultis/money_format.dart';
@@ -92,25 +93,47 @@ class _PaymentScreenState extends State<PaymentScreen>{
                             children: [
                               Text('Thông tin liên hệ', style: TextStyle(fontWeight: FontWeight.bold),),
                               SizedBox(height: 10,),
-                              InkWell(
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blue[50],
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text('Họ tên: ' + m_user.hoten),
-                                        Text('Địa chỉ: ' + m_user.diachi),
-                                        Text('Số điện thoại: ' + m_user.sdt),
-                                      ]
-                                  ),
-                                ),
-                                onTap: (){},
+                              TextField(
+                                maxLines: 1,
+                                decoration: InputDecoration(
+                                    labelText: 'Họ và tên',
+                                  )
                               ),
+                              TextField(
+                                maxLines: 1,
+                                decoration: InputDecoration(
+                                    labelText: 'Địa chỉ',
+                                  )
+                              ),
+                              TextField(
+                                maxLines: 1,
+                                keyboardType: TextInputType.phone,
+                                decoration: InputDecoration(
+                                    labelText: 'Số điện thoại',
+
+                                  )
+                              ),
+                              SizedBox(height: 20,),
+
+                              // InkWell(
+                              //   child: Container(
+                              //     padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                              //     width: double.infinity,
+                              //     decoration: BoxDecoration(
+                              //       color: Colors.blue[50],
+                              //       borderRadius: BorderRadius.circular(10),
+                              //     ),
+                              //     child: Column(
+                              //         crossAxisAlignment: CrossAxisAlignment.start,
+                              //         children: [
+                              //           Text('Họ tên: ' + m_user.hoten),
+                              //           Text('Địa chỉ: ' + m_user.diachi),
+                              //           Text('Số điện thoại: ' + m_user.sdt),
+                              //         ]
+                              //     ),
+                              //   ),
+                              //   onTap: (){},
+                              // ),
                             ],
                           ),
                         ),
@@ -172,7 +195,7 @@ class _PaymentScreenState extends State<PaymentScreen>{
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text('Tax'),
+                                  Text('Tax (10%)'),
                                   Text(toMoney(_tax.toDouble())),
                                 ],
                               ),
@@ -205,7 +228,11 @@ class _PaymentScreenState extends State<PaymentScreen>{
                       ),
                       SizedBox(width: 10,),
                       ElevatedButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          m_cart.clear();
+                          Navigator.pop(context);
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SuccessScreen()));
+                        },
                         child: Text('Thanh Toán'),
                       ),
                     ],
