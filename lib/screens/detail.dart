@@ -5,6 +5,7 @@ import 'package:gtnm/models/product_model.dart';
 import 'package:gtnm/screens/cart.dart';
 import 'package:gtnm/ultis/global.dart';
 import 'package:gtnm/ultis/money_format.dart';
+import 'package:gtnm/widgets/rate_start.dart';
 
 class DetailScreen extends StatefulWidget {
   DetailScreen({required this.model});
@@ -50,8 +51,9 @@ class _DetailScreenState extends State<DetailScreen> {
     );
   }
 
-  Widget _UserComment({ten, cmt}){
+  Widget _UserComment({ten, cmt, star}){
     return Container(
+      padding: EdgeInsets.only(bottom: 10),
       child: Row(
         children: [
           Container(
@@ -61,13 +63,21 @@ class _DetailScreenState extends State<DetailScreen> {
           SizedBox(
             width: 10,
           ),
-          Column(
-            crossAxisAlignment:
-            CrossAxisAlignment.start,
-            children: [
-              Text(ten),
-              Text(cmt)
-            ],
+          Flexible(
+            child: Column(
+              crossAxisAlignment:
+              CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(ten),
+                    RateStart(rate: double.parse(star.toString()), showText: false)
+                  ],
+                ),
+                Text(cmt)
+              ],
+            ),
           )
         ],
       ),
@@ -95,16 +105,16 @@ class _DetailScreenState extends State<DetailScreen> {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold)),
-                RichText(
-                    text: TextSpan(children: [
-                      TextSpan(text: "Giá: \n"),
-                      TextSpan(
-                          text: toMoney(widget.model.gia),
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold))
-                    ])),
+                SizedBox(height: 20,),
+                RateStart(rate: 4.5, size: 24),
+                SizedBox(height: 20,),
+                Text(
+                    toMoney(widget.model.gia),
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold)
+                ),
                 SizedBox(height: 20,),
                 Container(
                   child: Column(
@@ -214,7 +224,9 @@ class _DetailScreenState extends State<DetailScreen> {
                       SizedBox(
                         height: 15,
                       ),
-                      _UserComment(ten: 'Nặc danh', cmt: 'Dùng tốt, rất hài lòng'),
+                      _UserComment(ten: 'Nặc danh', cmt: 'Dùng tốt, rất hài lòng', star: 4),
+                      _UserComment(ten: 'Nặc danh', cmt: 'Giao hàng chậm', star: 2),
+                      _UserComment(ten: 'Nặc danh', cmt: 'Rất tốt', star: 5),
                     ],
                   ),
                 )
