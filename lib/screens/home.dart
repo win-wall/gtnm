@@ -58,10 +58,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: CircularProgressIndicator(),
                 );
               return Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   child: ListView(children: [
-                    SaleBanner(),
-                    SizedBox(height: 10),
+                    // SaleBanner(),
+                    // SizedBox(height: 10),
                     _ItemList(snapshot.data!),
                   ]));
             }));

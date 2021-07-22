@@ -8,9 +8,10 @@ typedef _SoLuongCallback(int);
 typedef _SelectCallback(bool);
 
 class CartItem extends StatefulWidget {
-  CartItem({Key? key ,required this.model, required this.onSoLuong, required this.onSelect}) : super(key: key);
+  CartItem({Key? key ,required this.model, required this.selected,required this.onSoLuong, required this.onSelect}) : super(key: key);
 
   ProductModel model;
+  bool selected = false;
   _SoLuongCallback onSoLuong;
   _SelectCallback onSelect;
 
@@ -19,7 +20,6 @@ class CartItem extends StatefulWidget {
 }
 
 class _CartItemState extends State<CartItem>{
-  bool _selected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +30,12 @@ class _CartItemState extends State<CartItem>{
           child: Row(
               children: [
                 Checkbox(
-                  value: _selected,
+                  value: widget.selected,
                   onChanged: (val){
                     setState(() {
-                      _selected = val!;
+                      widget.selected = val!;
                     });
-                    widget.onSelect(_selected);
+                    widget.onSelect(widget.selected);
                   }
                 ),
                 Container(
