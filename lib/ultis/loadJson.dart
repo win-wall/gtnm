@@ -2,6 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:gtnm/models/product_model.dart';
+import 'package:gtnm/ultis/global.dart';
+
+Future<void> loadJson() async {
+  m_products = await loadProductData();
+  m_cart = await loadCartData();
+}
 
 Future<List<ProductModel>> loadProductData() async {
   List<ProductModel> out = [];

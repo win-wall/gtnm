@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gtnm/models/app_model.dart';
 import 'package:gtnm/screens/account.dart';
 import 'package:gtnm/screens/cart.dart';
 import 'package:gtnm/screens/explore.dart';
 import 'package:gtnm/screens/home.dart';
 import 'package:gtnm/screens/login.dart';
 import 'package:gtnm/screens/online_support.dart';
+import 'package:gtnm/ultis/global.dart';
 import 'package:gtnm/widgets/search_bar.dart';
 
 class AppScreen extends StatefulWidget {
@@ -43,7 +43,7 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
   void _selectCategory(String category){
     _openDrawer();
     _tabController.animateTo(1);
-    m_appState.currentCatogary = category;
+    m_app.currentCatogary = category;
   }
 
   // ignore: non_constant_identifier_names
@@ -115,6 +115,70 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
     );
   }
 
+  Widget _BottomButton({text, icon, onPressed}){
+    return TextButton(
+      style: ButtonStyle(
+        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.zero),
+      ),
+      onPressed: onPressed,
+      child: Tab(
+        icon: Icon(icon, color: Colors.white,),
+        child: Text(
+            text,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 10,
+            )
+        ),
+      ),
+    );
+  }
+
+  Widget _BottomBar(){
+    return Container(
+      color: Theme.of(context).backgroundColor,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _BottomButton(
+              text: 'Trang Chủ',
+              icon: Icons.water_damage,
+              onPressed: (){
+                _tabController.animateTo(0);
+                setState(() {
+                  _currentIndex = 0;
+                });
+              },
+          ),
+          _BottomButton(
+              text: 'Khám Phá',
+              icon: Icons.volunteer_activism,
+              onPressed: (){
+                _tabController.animateTo(1);
+                setState(() {
+                  _currentIndex = 1;
+                });
+              },
+          ),
+          _BottomButton(
+            text: 'Tư Vấn',
+            icon: Icons.message,
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => OnlineSupportScreen()));
+            },
+          ),
+          _BottomButton(
+              text: 'Giỏ Hàng',
+              icon: Icons.add_shopping_cart,
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
+              },
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(      
@@ -144,91 +208,7 @@ class _AppScreenState extends State<AppScreen> with TickerProviderStateMixin {
               ],
             ),
           ),
-          Container(
-            color: Theme.of(context).backgroundColor,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TextButton(
-                  onPressed: (){
-                    _tabController.animateTo(0);
-                    setState(() {
-                      _currentIndex = 0;
-                    });
-                  },
-                  child: Tab(
-                    icon: Icon(Icons.water_damage),
-                    child: Text(
-                        'Trang Chủ',
-                        style: TextStyle(
-                          fontSize: 10,
-                        )
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: (){
-                    _tabController.animateTo(1);
-                    setState(() {
-                      _currentIndex = 1;
-                    });
-                  },
-                  child: Tab(
-                    icon: Icon(Icons.volunteer_activism),
-                    child: Text(
-                        'Khám Phá',
-                        style: TextStyle(
-                          fontSize: 10,
-                        )
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => CartScreen()));
-                  },
-                  child: Tab(
-                    icon: Icon(Icons.add_shopping_cart),
-                    child: Text(
-                        'Giỏ Hàng',
-                        style: TextStyle(
-                          fontSize: 10,
-                        )
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => OnlineSupportScreen()));
-                  },
-                  child: Tab(
-                    icon: Icon(Icons.message),
-                    child: Text(
-                        'Tư Vấn',
-                        style: TextStyle(
-                          fontSize: 10,
-                        )
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => AccountScreen()));
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
-                  },
-                  child: Tab(
-                    icon: Icon(Icons.account_circle),
-                    child: Text(
-                        'Tài Khoản',
-                        style: TextStyle(
-                          fontSize: 10,
-                        )
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          )
+          _BottomBar(),
         ],
       ),// This trailing comma makes auto-formatting nicer for build methods.
     );

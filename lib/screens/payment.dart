@@ -7,7 +7,9 @@ import 'package:gtnm/ultis/money_format.dart';
 import 'package:gtnm/widgets/pay_item.dart';
 
 class PaymentScreen extends StatefulWidget {
-  PaymentScreen({Key? key}) : super(key: key);
+  PaymentScreen({Key? key, required this.list}) : super(key: key);
+
+  List<ProductModel> list;
 
   @override
   _PaymentScreenState createState() => _PaymentScreenState();
@@ -27,7 +29,9 @@ class _PaymentScreenState extends State<PaymentScreen>{
   }
 
   Future<List<ProductModel>> _loadCart() async {
-    return  await loadCartData();
+    // return  await loadCartData();
+    // return m_cart;
+    return widget.list;
   }
 
   // ignore: non_constant_identifier_names
@@ -99,10 +103,9 @@ class _PaymentScreenState extends State<PaymentScreen>{
                                   child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text('Họ tên: ' + global_user.hoten),
-                                        Text('Địa chỉ: ' + global_user.diachi),
-                                        Text('Số điện thoại: ' + global_user.sdt),
-                                        Text('ghi chú: ' + global_user.ghichu),
+                                        Text('Họ tên: ' + m_user.hoten),
+                                        Text('Địa chỉ: ' + m_user.diachi),
+                                        Text('Số điện thoại: ' + m_user.sdt),
                                       ]
                                   ),
                                 ),

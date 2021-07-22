@@ -44,7 +44,7 @@ class CategoryItem extends StatelessWidget{
         ),
       ),
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailScreen(model: model,)));
       },
     );
   }
