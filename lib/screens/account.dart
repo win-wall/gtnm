@@ -14,23 +14,26 @@ class _AccountScreenState extends State<AccountScreen>{
     super.initState();
   }
 
-  Widget _Button({image, text, tap}){
+  Widget _Button({icon, text, tap}){
     return Flexible(
       child: TextButton(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Image( image: NetworkImage(image), width: 50, height: 50,),
-            SizedBox(width: 10),
-            Text(
-              text,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 14,
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Icon(icon),
+              SizedBox(width: 20),
+              Text(
+                text,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         onPressed: tap,
       ),
@@ -76,11 +79,11 @@ class _AccountScreenState extends State<AccountScreen>{
             ),
           ),
           Divider(),
-          _Button(image: 'http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg', text: 'Thông tin', tap: (){ print('print');}),
-          _Button(image: 'http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg', text: 'Yêu thích', tap: (){}),
-          _Button(image: 'http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg', text: 'Đã mua', tap: (){}),
-          _Button(image: 'http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg', text: 'Giao hàng', tap: (){}),
-          _Button(image: 'http://www.kyosemi.co.jp/mgt/wp-content/uploads/products/kpdg020c/kpdg020c.jpg', text: 'Đánh giá', tap: (){}),
+          _Button(icon: Icons.edit, text: 'Thông tin', tap: (){ print('print');}),
+          _Button(icon: Icons.favorite, text: 'Yêu thích', tap: (){}),
+          _Button(icon: Icons.history, text: 'Đã mua', tap: (){}),
+          _Button(icon: Icons.airport_shuttle, text: 'Giao hàng', tap: (){}),
+          _Button(icon: Icons.add_comment, text: 'Đánh giá', tap: (){}),
 
         ],
       )
